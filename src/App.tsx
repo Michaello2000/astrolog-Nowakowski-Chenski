@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import { CelestialObject } from './types.ts';
 
 const INITIAL_ASTRO_DATA = [
   {
@@ -40,10 +40,16 @@ const INITIAL_ASTRO_DATA = [
 ];
 
 function App() {
+  const [celestialObjects, setCelestialObjects] = useState<CelestialObject[]>(INITIAL_ASTRO_DATA);
+  const [selectedObject, setSelectedObject] = useState<CelestialObject>;
+  
   return (
-    <>
-      
-    </>
+      <div className="app-container" style={{ backgroundColor: '#0f172a', color: '#fff', minHeight: '100vh', padding: '20px' }}>
+        <h1>🌌 AstroLog — Panel Obserwacyjny</h1>
+        <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
+
+        </div>
+      </div>
   )
 }
 
