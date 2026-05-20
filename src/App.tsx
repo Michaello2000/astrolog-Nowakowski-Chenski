@@ -48,7 +48,7 @@ function App() {
   return (
       <div className="app-container" style={{ backgroundColor: '#0f172a', color: '#fff', minHeight: '100vh', padding: '20px' }}>
         <h1>AstroLog — Panel Obserwacyjny</h1>
-        <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
+        <div style={{ display: 'flex', gap: '20px', marginTop: '25px' }}>
           <CatalogList
               objects={celestialObjects}
               onSelectObject={setSelectedObject}

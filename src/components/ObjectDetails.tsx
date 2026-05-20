@@ -34,10 +34,10 @@ export default function ObjectDetails({ activeObject }: ObjectDetailsProps) {
             backgroundColor: '#1e293b',
             borderRadius: '12px',
             padding: '25px',
-            border: '1px solid #334155'
+            border: '1px solid #a855f7'
         }}>
-            <h2 style={{ color: '#a855f7', marginBottom: '20px', fontSize: '1.4rem' }}>
-                Panel Obserwacyjny: {activeObject.name}
+            <h2 style={{marginBottom: '20px', fontSize: '1.4rem', textAlign: 'left' }}>
+                Panel Obserwacyjny
             </h2>
 
             <img
@@ -53,7 +53,12 @@ export default function ObjectDetails({ activeObject }: ObjectDetailsProps) {
                 }}
             />
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '1.1rem' }}>
+            <h2 style={{marginBottom: '20px', fontSize: '1.8rem', textAlign: 'left'}}>
+                {activeObject.name}
+            </h2>
+
+            <div style={{ padding: '15px', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '12px', 
+                fontSize: '1.1rem', border: '1px solid', borderRadius: '12px' }}>
                 <div>
                     <strong style={{ color: '#94a3b8' }}>Typ obiektu:</strong>
                     <span style={{ marginLeft: '10px', color: '#f8fafc' }}>{activeObject.type}</span>
