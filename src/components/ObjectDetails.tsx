@@ -27,4 +27,42 @@ export default function ObjectDetails({ activeObject }: ObjectDetailsProps) {
             </div>
         );
     }
+
+    return (
+        <div style={{
+            flex: 1,
+            backgroundColor: '#1e293b',
+            borderRadius: '12px',
+            padding: '25px',
+            border: '1px solid #334155'
+        }}>
+            <h2 style={{ color: '#a855f7', marginBottom: '20px', fontSize: '1.4rem' }}>
+                Panel Obserwacyjny: {activeObject.name}
+            </h2>
+
+            <img
+                src={activeObject.image}
+                alt={activeObject.name}
+                style={{
+                    width: '100%',
+                    maxHeight: '300px',
+                    objectFit: 'cover',
+                    borderRadius: '8px',
+                    marginBottom: '20px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
+                }}
+            />
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '1.1rem' }}>
+                <div>
+                    <strong style={{ color: '#94a3b8' }}>Typ obiektu:</strong>
+                    <span style={{ marginLeft: '10px', color: '#f8fafc' }}>{activeObject.type}</span>
+                </div>
+                <div>
+                    <strong style={{ color: '#94a3b8' }}>Odległość od Ziemi:</strong>
+                    <span style={{ marginLeft: '10px', color: '#f8fafc' }}>{activeObject.distance}</span>
+                </div>
+            </div>
+        </div>
+    );
 }
