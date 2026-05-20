@@ -24,7 +24,8 @@ export default function CatalogList({ objects, onSelectObject }: CatalogListProp
                             display: 'flex',
                             alignItems: 'center',
                             gap: '12px',
-                            border: '1px solid #334155'
+                            border: '1px solid #334155',
+                            cursor: 'pointer'
                         }}
                     >
                         <img

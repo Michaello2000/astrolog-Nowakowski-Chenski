@@ -16,10 +16,10 @@ export default function ObjectDetails({ activeObject }: ObjectDetailsProps) {
                 borderRadius: '12px',
                 border: '2px dashed #334155',
                 height: '400px',
-                color: '#94a3b8'
+                color: '#94a3b8',
+                marginTop: '20px'
             }}>
                 <div style={{ textAlign: 'center' }}>
-                    <p style={{ fontSize: '3rem', margin: 0 }}>🔭</p>
                     <p style={{ fontSize: '1.1rem', marginTop: '10px' }}>
                         System prosi o wskazanie celu. Wybierz obiekt z katalogu...
                     </p>
