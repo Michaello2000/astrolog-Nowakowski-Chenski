@@ -15,7 +15,7 @@ export default function ObjectDetails({ activeObject }: ObjectDetailsProps) {
                 backgroundColor: '#1e293b',
                 borderRadius: '12px',
                 border: '2px dashed #334155',
-                height: '400px',
+                height: '500px',
                 color: '#94a3b8',
                 marginTop: '20px'
             }}>
@@ -34,24 +34,30 @@ export default function ObjectDetails({ activeObject }: ObjectDetailsProps) {
             backgroundColor: '#1e293b',
             borderRadius: '12px',
             padding: '25px',
-            border: '1px solid #a855f7'
+            border: '1px solid #a855f7',
+            minHeight: '500px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between'
         }}>
             <h2 style={{marginBottom: '20px', fontSize: '1.4rem', textAlign: 'left' }}>
                 Panel Obserwacyjny
             </h2>
 
-            <img
-                src={activeObject.image}
-                alt={activeObject.name}
-                style={{
-                    width: '100%',
-                    maxHeight: '300px',
-                    objectFit: 'cover',
-                    borderRadius: '8px',
-                    marginBottom: '20px',
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
-                }}
-            />
+            <div style={{ width: '100%', height: '250px', overflow: 'hidden', borderRadius: '8px', marginBottom: '20px' }}>
+                <img
+                    src={activeObject.image}
+                    alt={activeObject.name}
+                    style={{
+                        width: '100%',
+                        height: '300px',
+                        objectFit: 'cover',
+                        borderRadius: '8px',
+                        marginBottom: '20px',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
+                    }}
+                />
+            </div>
 
             <h2 style={{marginBottom: '20px', fontSize: '1.8rem', textAlign: 'left'}}>
                 {activeObject.name}
