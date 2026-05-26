@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import type { CelestialObject } from '../types';
 
 interface DiscoveryFormProps {
@@ -11,7 +11,7 @@ export default function DiscoveryForm({ onAdd }: DiscoveryFormProps) {
     const [distance, setDistance] = useState('');
     const [image, setImage] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!name || !type || !distance) return;
 
