@@ -7,8 +7,8 @@ interface CatalogListProps {
 
 export default function CatalogList({ objects, onSelectObject }: CatalogListProps) {
     return (
-        <div style={{ width: '30%', borderRight: '1px solid #334155', paddingRight: '20px' }}>
-            <h2 style={{ fontSize: '1.2rem', marginBottom: '15px', color: '#38bdf8' }}>
+        <div style={{ width: '30%', border: '1px solid #334155', paddingRight: '8px', borderRadius: '12px', paddingLeft: '5px' }}>
+            <h2 style={{ fontSize: '1.2rem', marginBottom: '15px', marginTop: '20px' }}>
                 Katalog Obiektów
             </h2>
             <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
@@ -24,7 +24,8 @@ export default function CatalogList({ objects, onSelectObject }: CatalogListProp
                             display: 'flex',
                             alignItems: 'center',
                             gap: '12px',
-                            border: '1px solid #334155'
+                            border: '1px solid #334155',
+                            cursor: 'pointer'
                         }}
                     >
                         <img
