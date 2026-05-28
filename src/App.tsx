@@ -51,21 +51,25 @@ function App() {
   };
 
   return (
-      <div className="app-container" style={{ backgroundColor: '#0f172a', color: '#fff', minHeight: '100vh', padding: '20px', fontFamily: 'sans-serif' }}>
-        <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>AstroLog — Panel Obserwacyjny</h1>
-        <div style={{ display: 'flex', gap: '20px', marginTop: '25px', alignItems: 'flex-start' }}>
+      <div className="app-container" style={{ backgroundColor: '#0f172a', color: '#fff', minHeight: '100vh', padding: '20px' }}>
+        <h1>AstroLog — Panel Obserwacyjny</h1>
+        <div style={{ display: 'flex', gap: '20px', marginTop: '25px', alignItems: 'stretch' }}>
+
           <CatalogList
               objects={celestialObjects}
               onSelectObject={setSelectedObject}
           />
 
-          <ObjectDetails
-              activeObject={selectedObject}
-          />
+          <div style={{ width: '40%', display: 'flex', flexDirection: 'column' }}>
+            <ObjectDetails
+                activeObject={selectedObject}
+            />
+          </div>
 
           <div style={{ width: '30%' }}>
             <DiscoveryForm onAdd={handleAddObject} />
           </div>
+
         </div>
       </div>
   )
