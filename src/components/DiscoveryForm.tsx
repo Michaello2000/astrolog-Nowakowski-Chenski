@@ -38,7 +38,7 @@ export default function DiscoveryForm({ onAdd }: DiscoveryFormProps) {
 
     return (
         <form onSubmit={handleSubmit} style={{ marginTop: '30px', padding: '20px', background: '#1e293b', borderRadius: '12px' }}>
-            <h3 style={{ color: '#38bdf8', marginBottom: '16px' }}>🔭 Zgłoś Nowe Odkrycie</h3>
+            <h3 style={{ color: '#38bdf8', marginBottom: '16px' }}>Zgłoś Nowe Odkrycie</h3>
             <input style={inputStyle} value={name} onChange={e => setName(e.target.value)} placeholder="Nazwa obiektu" required />
             <input style={inputStyle} value={type} onChange={e => setType(e.target.value)} placeholder="Typ (np. Galaktyka spiralna)" required />
             <input style={inputStyle} value={distance} onChange={e => setDistance(e.target.value)} placeholder="Odległość (np. 2.5 mln l.św.)" required />
