@@ -17,7 +17,6 @@ export default function ObjectDetails({ activeObject }: ObjectDetailsProps) {
                 border: '2px dashed #334155',
                 height: '500px',
                 color: '#94a3b8',
-                marginTop: '20px'
             }}>
                 <div style={{ textAlign: 'center' }}>
                     <p style={{ fontSize: '1.1rem', marginTop: '10px' }}>
