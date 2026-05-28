@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { CelestialObject } from './types';
 import CatalogList from "./components/CatalogList.tsx";
 import ObjectDetails from "./components/ObjectDetails.tsx";
+import DiscoveryForm from "./components/DiscoveryForm.tsx";
 
 const INITIAL_ASTRO_DATA = [
   {
@@ -44,22 +45,34 @@ const INITIAL_ASTRO_DATA = [
 function App() {
   const [celestialObjects, setCelestialObjects] = useState<CelestialObject[]>(INITIAL_ASTRO_DATA);
   const [selectedObject, setSelectedObject] = useState<CelestialObject | null>(null);
-  
+
+  const handleAddObject = (newObj: CelestialObject) => {
+    setCelestialObjects([...celestialObjects, newObj]);
+  };
+
   return (
       <div className="app-container" style={{ backgroundColor: '#0f172a', color: '#fff', minHeight: '100vh', padding: '20px' }}>
         <h1>AstroLog — Panel Obserwacyjny</h1>
-        <div style={{ display: 'flex', gap: '20px', marginTop: '25px' }}>
+        <div style={{ display: 'flex', gap: '20px', marginTop: '25px', alignItems: 'stretch' }}>
+
           <CatalogList
               objects={celestialObjects}
               onSelectObject={setSelectedObject}
           />
 
-          <ObjectDetails
-              activeObject={selectedObject}
-          />
+          <div style={{ width: '40%', display: 'flex', flexDirection: 'column' }}>
+            <ObjectDetails
+                activeObject={selectedObject}
+            />
+          </div>
+
+          <div style={{ width: '30%' }}>
+            <DiscoveryForm onAdd={handleAddObject} />
+          </div>
+
         </div>
       </div>
   )
 }
 
-export default App
+export default App;
